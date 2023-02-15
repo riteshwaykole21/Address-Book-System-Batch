@@ -11,6 +11,9 @@ namespace AddressBookSysteam
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome In Address Book Systeam ");
+            AddressBook addressBook = new AddressBook();
+            addressBook.CreateContact();
+            addressBook.Display();
             Console.ReadLine();
         }
     }

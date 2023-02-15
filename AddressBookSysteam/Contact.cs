@@ -13,7 +13,7 @@ namespace AddressBookSysteam
         public string Adderss { get; set; }
         public string city { get; set; }
         public string state { get; set; }
-        public string zip { get; set; }
+        public long Zip { get; set; }
         public string phoneNumber { get; set; }
         public string Email { get; set; }
 
