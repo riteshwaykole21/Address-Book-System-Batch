@@ -30,7 +30,6 @@ namespace AddressBookSysteam
             contact.Zip = Convert.ToInt64(Console.ReadLine());
             contactList.Add(contact);
             Console.WriteLine();
-
         }
         public void Display()
         {
