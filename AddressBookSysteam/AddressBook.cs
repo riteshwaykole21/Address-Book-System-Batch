@@ -84,6 +84,25 @@ namespace AddressBookSysteam
                             break;
                     }
                 }
+                else
+                {
+                    Console.WriteLine("Contact is not Found");
+                }
+            }
+        }
+        public void DeleteContact()
+        {
+            Console.WriteLine("Enter The First Nmae");
+            string name = Console.ReadLine();
+            Contact deletecontact = new Contact();
+            foreach (var contact in contactList.ToList())
+            {
+                if(contact.FirstName.Equals(name))
+                {
+                    deletecontact = contact;
+                }
+                contactList.Remove(deletecontact);
+                Console.WriteLine("Contact Has Been Deleted");
             }
         }
     }

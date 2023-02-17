@@ -15,7 +15,7 @@ namespace AddressBookSysteam
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter 1: Creating Contact \n 2:Editing Contact");
+                Console.WriteLine("Enter 1: Creating Contact \n 2:Editing Contact \n 3:Delete Contact ");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -30,6 +30,11 @@ namespace AddressBookSysteam
                         addressBook.Display();
                         break;
                     case 3:
+                        Console.WriteLine("Delete Contact");
+                        addressBook.DeleteContact();
+                        addressBook.Display();
+                        break ;
+                    case 4:
                         flag = false;
                         break;
                 }
