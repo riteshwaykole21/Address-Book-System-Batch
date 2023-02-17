@@ -8,10 +8,11 @@ namespace AddressBookSysteam
 {
     public class AddressBook
     {
-        Contact contact = new Contact();
+        
         List<Contact> contactList = new List<Contact>();
         public void CreateContact()
         {
+            Contact contact = new Contact();
             Console.WriteLine("Enter the First Name:");
             contact.FirstName = Console.ReadLine();
             Console.WriteLine("Enter the Last Name:");
@@ -33,9 +34,12 @@ namespace AddressBookSysteam
         }
         public void Display()
         {
-            Console.WriteLine("Contact Details" + "\n" + "FirstName:" + contact.FirstName + "\n" + "LastName" +
-                ":" + contact.LastName + "\n" + "Email:" + contact.Email + "\n" + "City:" + contact.city + "\n" + "PhoneNumber:" + contact.phoneNumber + "\n" +
-                "Address:" + contact.Address + "\n" + "State:" + contact.state + "\n" + "Zip:" + contact.Zip + "\n");
+            foreach (var contact in contactList)
+            {
+                Console.WriteLine("Contact Details" + "\n" + "FirstName:" + contact.FirstName + "\n" + "LastName" +
+                    ":" + contact.LastName + "\n" + "Email:" + contact.Email + "\n" + "City:" + contact.city + "\n" + "PhoneNumber:" + contact.phoneNumber + "\n" +
+                    "Address:" + contact.Address + "\n" + "State:" + contact.state + "\n" + "Zip:" + contact.Zip + "\n");
+            }
         }
         public void EditContact(string name)
         {
@@ -91,6 +95,7 @@ namespace AddressBookSysteam
         }
         public void DeleteContact()
         {
+
             Console.WriteLine("Enter The First Nmae");
             string name = Console.ReadLine();
             Contact deletecontact = new Contact();
